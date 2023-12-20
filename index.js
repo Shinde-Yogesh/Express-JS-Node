@@ -50,9 +50,28 @@ const port = 3000;
 app.get("/", (req, res) => {
     res.send("hello world")
 })
-app.get("/about", (req, res) => {
-    res.send("<h1> About section </h1>")
+
+app.post("/register", (req, res) => {
+    res.sendStatus(201)
 })
+
+// for put
+
+app.put("/user/yogesh",(req,res) =>
+{
+    res.sendStatus(200)
+})
+
+app.patch("/user/yogesh",(req,res) =>
+{
+    res.sendStatus(200)
+})
+app.delete("/user/yogesh",(req,res) =>
+{
+    res.sendStatus(200)
+})
+
+
 
 
 app.listen(port, () => {
